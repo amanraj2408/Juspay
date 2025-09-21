@@ -1,16 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import GlowingEllipse from "./GlowingEllipse";
 import { Button } from "antd";
 
+export default function FullScreenAssignmentCover() {
+  const navigate = useNavigate();
 
-export default function FullScreenAssignmentCover({ onOpenDashboard }) {
-
+  const onOpenDashboard = () => {
+    navigate("/dashboard");
+  };
 
   return (
     <div
       style={{
-        width: "100vw",  // full viewport width
-        height: "100vh", // full viewport height
+        width: "100vw",
+        height: "100vh",
         minHeight: 600,
         background: "#171717",
         opacity: 1,
@@ -23,10 +27,10 @@ export default function FullScreenAssignmentCover({ onOpenDashboard }) {
       <div
         style={{
           position: "absolute",
-          left: "2.6vw", // relative to viewport width (51px / 1920)
-          top: "0.5vh",  // relative to viewport height (10px / 1080)
-          width: "37.2vw",  // 714px / 1920
-          height: "66.2vh", // 714px / 1080 (due to viewport height scaling)
+          left: "2.6vw",
+          top: "0.5vh",
+          width: "37.2vw",
+          height: "66.2vh",
           opacity: 0.2,
           zIndex: 2,
           pointerEvents: "none",
@@ -39,10 +43,10 @@ export default function FullScreenAssignmentCover({ onOpenDashboard }) {
       />
 
       <GlowingEllipse
-        width={"40.5vw"}   // 777px / 1920
-        height={"47.1vh"}  // 508px / 1080
-        left={"23.65vw"}   // 454px / 1920
-        top={"-57.4vh"}    // -618px / 1080
+        width={"40.5vw"}
+        height={"47.1vh"}
+        left={"23.65vw"}
+        top={"-57.4vh"}
         opacity={0.8}
         background="#12E6C8"
         blur={120}
@@ -50,10 +54,10 @@ export default function FullScreenAssignmentCover({ onOpenDashboard }) {
       />
 
       <GlowingEllipse
-        width={"36.8vw"}   // 706px / 1920
-        height={"59.0vh"}  // 637px / 1080
-        left={"50.9vw"}    // 977px / 1920
-        top={"71.1vh"}     // 767px / 1080
+        width={"36.8vw"}
+        height={"59.0vh"}
+        left={"50.9vw"}
+        top={"71.1vh"}
         opacity={0.8}
         background="#A287F4"
         blur={120}
@@ -68,30 +72,29 @@ export default function FullScreenAssignmentCover({ onOpenDashboard }) {
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
-          paddingLeft: "6.7vw",  // 130px / 1920
-          paddingTop: "12.9vh",  // 140px / 1080
+          paddingLeft: "6.7vw",
+          paddingTop: "12.9vh",
           color: "#fff",
         }}
       >
         <div>
           <Button
-          onClick={onOpenDashboard}
-           style={{
-            background: "#FFC043",
-            borderRadius: 6,
-            minWidth: 120,
-            fontWeight: 600,
-            letterSpacing: 1,
-            padding: "3px 24px",
-            color: "#171717", 
-            display: "inline-block",
-            marginBottom: "1.5rem",
-            boxShadow: "0 2px 6px #ffffff",
-          }}
+            onClick={onOpenDashboard}
+            style={{
+              background: "#FFC043",
+              borderRadius: 6,
+              minWidth: 120,
+              fontWeight: 600,
+              letterSpacing: 1,
+              padding: "3px 24px",
+              color: "#171717",
+              display: "inline-block",
+              marginBottom: "1.5rem",
+              boxShadow: "0 2px 6px #ffffff",
+            }}
           >
-          ASSIGNMENT
+            ASSIGNMENT
           </Button>
-
         </div>
         <div
           style={{
@@ -105,7 +108,7 @@ export default function FullScreenAssignmentCover({ onOpenDashboard }) {
           <br />
           ASSIGNMENT
         </div>
-         
+
         <div
           style={{
             marginTop: "10rem",
