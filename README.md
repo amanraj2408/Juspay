@@ -37,6 +37,48 @@ bash
 npm start
 Open http://localhost:3000 to view in the browser.
 
+Here is an updated README section explaining both the Card and the Assignment button click-to-navigate behavior in your React dashboard project:
+
+***
+
+## Navigation and Click Behavior
+
+This React dashboard project implements multiple navigation flows that enable smooth transitioning between different pages using React Router.
+
+### Card Click Navigation
+
+- The **Card** component on the dashboard is clickable.
+- Clicking a Card navigates the user to the **Order Dashboard** page (`/orders` route).
+- Navigation is implemented using React Router’s `useNavigate` hook internally within the Card component.
+- This allows quick access to detailed order information by clicking Cards visually represented on the dashboard.
+
+### Assignment Button Click Navigation
+
+- On the **Cover Page**, there is an **Assignment** button.
+- Clicking this button routes the user to the main **Dashboard** page (`/dashboard` route).
+- This is achieved using `useNavigate` in the Cover Page component or by passing navigation callbacks where applicable.
+- This design offers a clean entry point for users to start working on the dashboard after visiting the cover page.
+
+### Routes Configured
+
+- `/` - Cover Page (Entry/landing)
+- `/dashboard` - Main Dashboard with stats and cards
+- `/orders` - Order Dashboard displaying orders list with sortable and styled rows
+
+### Header Controls
+
+- Sidebar toggle button opens and closes the sidebar menu.
+- Notification bell opens a slide-in notifications drawer.
+- Theme toggle button switches the UI theme between dark and light modes.
+- Refresh button reloads the page.
+
+### Usage Notes
+
+- Ensure you are visiting the correct routes to see respective pages.
+- Navigation actions are fully client-side SPA transitions for smooth user experience.
+- Dark/light themes help users switch between comfortable visual modes.
+
+
 Folder Structure
 text
 src/
